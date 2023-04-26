@@ -17,6 +17,17 @@ Note :
 
 <hr/>
 
+### How to start the application
+
+1. Dev environment
+
+```
+npm install
+npm run dev
+
+And check: http://localhost:5173/
+```
+
 ### ScreenShots
 
 ![ScreenShot1](/screenshots/Screenshot1.png)
