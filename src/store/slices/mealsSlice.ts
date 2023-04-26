@@ -27,6 +27,7 @@ const mealsSlice = createSlice({
             state.loading = true;
         });
         builder.addCase(listAllMeals.fulfilled, (state, action: PayloadAction<Meal[]>) => {
+            action.payload.length = 12;
             state.loading = false;
             state.meals = action.payload;
             state.error = '';

@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import App from './App';
 import AppLayout from './components/AppLayout/AppLayout';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
 import { MealDetails } from './screens/MealDetails';
+import Home from './screens/Home';
 
 const router = createBrowserRouter([
     {
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '',
-                element: <App />,
+                element: <Home />,
             },
             {
                 path: 'meal/:mealId',
