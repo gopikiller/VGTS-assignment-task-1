@@ -23,7 +23,9 @@ export const MealPage: React.FC = () => {
             for (let index = 1; index <= 10; index++) {
                 if (!meal.meals) return;
                 const element = meal.meals[`${key}${index}` as keyof Meal];
-                ingredients.push(element);
+                if (element.length !== 0) {
+                    ingredients.push(element);
+                }
             }
             return ingredients;
         },

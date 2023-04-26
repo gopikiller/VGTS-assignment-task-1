@@ -14,3 +14,12 @@ Note :
 1. The user’s shipping information and order details should be removed on refresh and redirected to the home page.
 2. Use Antd ui for front-end development
 3. Use Redux for state management
+
+<hr/>
+
+### ScreenShots
+
+![ScreenShot1](/screenshots/Screenshot1.png)
+![ScreenShot2](/screenshots/Screenshot2.png)
+![ScreenShot3](/screenshots/Screenshot3.png)
+![ScreenShot4](/screenshots/Screenshot4.png)
