@@ -1,0 +1,10 @@
+@import '../../styles/screen.scss';
+
+.meal-detail-body {
+    padding: 1em;
+
+    @include tablet {
+        padding: 0;
+        padding-top: 1em;
+    }
+}

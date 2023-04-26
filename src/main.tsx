@@ -6,6 +6,8 @@ import { Provider } from 'react-redux';
 import { store } from './store/store';
 import HomePage from './screens/HomePage';
 import { MealPage } from './screens/MealPage';
+import { CheckoutPage } from './screens/CheckoutPage';
+import { SuccesPage } from './screens/SuccesPage';
 
 const router = createBrowserRouter([
     {
@@ -19,6 +21,14 @@ const router = createBrowserRouter([
             {
                 path: 'meal/:mealId',
                 element: <MealPage />,
+            },
+            {
+                path: 'checkout',
+                element: <CheckoutPage />,
+            },
+            {
+                path: 'success',
+                element: <SuccesPage />,
             },
         ],
     },

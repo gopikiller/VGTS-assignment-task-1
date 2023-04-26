@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Card, Col, Row, Image, Typography, Tag, Button } from 'antd';
 import { Meal } from '../../types/MealTypes';
+import { useNavigate } from 'react-router-dom';
+import './MealDetails.scss';
 
 type MealDetailProps = {
     ingredients?: string[];
@@ -8,19 +10,14 @@ type MealDetailProps = {
 };
 
 export const MealDetails: React.FC<Meal & MealDetailProps> = ({ strArea, strCategory, strMeal, strMealThumb, strInstructions, ingredients, measures }) => {
-    const [visible, setVisible] = useState(false);
+    const navigate = useNavigate();
     return (
         <Card title={strMeal} bordered={false}>
             <Row>
-                <Col span={6}>
-                    <Image preview={{ visible: false }} src={strMealThumb} onClick={() => setVisible(true)} />
-                    <div style={{ display: 'none' }}>
-                        <Image.PreviewGroup preview={{ visible, onVisibleChange: vis => setVisible(vis) }}>
-                            <Image src={strMealThumb} />
-                        </Image.PreviewGroup>
-                    </div>
+                <Col xl={6} sm={24}>
+                    <Image src={strMealThumb} />
                 </Col>
-                <Col span={18} style={{ padding: '1em' }}>
+                <Col xl={18} sm={24} className="meal-detail-body">
                     <div>
                         <Tag color="red-inverse">{strCategory}</Tag>
                         <Tag color="green-inverse">{strArea}</Tag>
@@ -35,7 +32,9 @@ export const MealDetails: React.FC<Meal & MealDetailProps> = ({ strArea, strCate
                             </Tag>
                         ))}
                     </div>
-                    <Button type="primary">Checkout</Button>
+                    <Button type="primary" onClick={() => navigate('/checkout', { state: { strArea, strCategory, strMeal, strMealThumb, strInstructions, ingredients, measures } })}>
+                        Checkout
+                    </Button>
                 </Col>
             </Row>
             <div>

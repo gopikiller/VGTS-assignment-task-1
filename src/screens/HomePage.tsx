@@ -37,7 +37,7 @@ const HomePage: React.FC = () => {
             {!meal.loading && meal.meals.length > 0 && (
                 <Row gutter={[8, 8]}>
                     {mealResult.map((m, i) => (
-                        <Col key={i} span={6}>
+                        <Col key={i} xl={6} lg={8} sm={24}>
                             <MealCard id={Number(m.idMeal)} title={m.strMeal} thumb={m.strMealThumb} area={m.strArea} category={m.strCategory} />
                         </Col>
                     ))}
