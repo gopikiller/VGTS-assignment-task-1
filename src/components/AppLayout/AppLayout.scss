@@ -1,7 +1,11 @@
 @import '../../styles/screen.scss';
 
 .app-layout {
-    max-width: $xl;
+    max-width: $lg;
     margin: auto;
     padding: 1em;
+
+    h1 {
+        text-align: center;
+    }
 }
