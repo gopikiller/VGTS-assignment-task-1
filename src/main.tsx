@@ -4,8 +4,8 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import AppLayout from './components/AppLayout/AppLayout';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
-import { MealDetails } from './screens/MealDetails';
-import Home from './screens/Home';
+import HomePage from './screens/HomePage';
+import { MealPage } from './screens/MealPage';
 
 const router = createBrowserRouter([
     {
@@ -14,11 +14,11 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '',
-                element: <Home />,
+                element: <HomePage />,
             },
             {
                 path: 'meal/:mealId',
-                element: <MealDetails />,
+                element: <MealPage />,
             },
         ],
     },

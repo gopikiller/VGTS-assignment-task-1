@@ -5,7 +5,7 @@ import { Col, Input, Row, Spin } from 'antd';
 import { MealCard } from '../components/MealCard/MealCard';
 import { Meal } from '../types/MealTypes';
 
-const Home: React.FC = () => {
+const HomePage: React.FC = () => {
     const [searchTerm, setSearchTerm] = useState<string>('');
     const meal = useAppSelector(state => state.meals);
     const [mealResult, setMealResult] = useState<Meal[]>(meal.meals);
@@ -42,4 +42,4 @@ const Home: React.FC = () => {
     );
 };
 
-export default Home;
+export default HomePage;
